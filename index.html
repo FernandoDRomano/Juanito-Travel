@@ -6,16 +6,242 @@
 
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FUENTES DE GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">    
+    <!-- ICONOS DE FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <!-- SWIPER - PARA EL SLIDER DE IMAGENES -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- ESTILOS PROPIOS -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- ICONO DE LA PÁGINA -->
     <link rel="icon" href="img/icono.jpg">
     <title>Juanito Travel</title>
   </head>
-  <body>
+  <body id="cuerpo">
 
+    <!-- ENCABEZADO -->
+    <header id="encabezado">
+        <div class="container-fluid px-0">
+           <div class="container">
+               <div class="row align-items-center">
+                   <!-- LOGO -->
+                   <div class="col-10 col-md-8 col-lg-6">
+                        <a href="index.html">
+                            <img src="img/logotipo-negativo.png" alt="logo de Juanito Travel" class="img-fluid logotipo">
+                        </a>
+                   </div>
+                   <!-- REDES SOCIALES -->
+                   <div class="col-md-2 col-lg-4 p-3 redes d-none d-md-block">
+                    <ul class="d-flex mb-0 justify-content-end">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-facebook-f rounded-circle mr-1 lead text-white"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-instagram rounded-circle mr-1 lead text-white"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-twitter rounded-circle mr-1 lead text-white"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-youtube rounded-circle mr-1 lead text-white"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-snapchat-ghost rounded-circle mr-1 lead text-white"></i>
+                            </a>
+                        </li>
+                    </ul>
+                   </div>
+                   <!-- BUSCADOR Y BOTÓN MENU-->
+                   <div class="col-2 col-md-2 col-lg-2 px-3 py-2 d-flex justify-content-end align-items-center text-white">
+                        <!-- BUSCADOR -->
+                        <div class="buscador  d-none d-md-block">
+                            <i class="fas fa-search lead mr-lg-5 mr-md-3"></i>
+                        </div>
+                        <!-- BOTÓN MENU -->
+                        <div class="botonMenu">
+                            <i class="fas fa-bars lead"></i>
+                        </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </header>
+
+    <!-- ICONOS DE REDES SOCIALES PARA MOVIL -->
+    <section id="redesSocialesMovil">
+        <div class="redes d-block d-md-none">
+            <ul class="d-flex p-0 py-2 mb-0 justify-content-center">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f rounded-circle mr-3 mr-sm-4 lead text-white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram rounded-circle mr-3 mr-sm-4 lead text-white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-twitter rounded-circle mr-3 mr-sm-4 lead text-white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube rounded-circle mr-3 mr-sm-4 lead text-white"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-snapchat-ghost rounded-circle mr-3 mr-sm-4 lead text-white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BANNER DE IMAGENES -->
+    <section id="banner">
+        <div class="container-fluid px-0">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="img/banner01.jpg" alt="viajes de Juanito Travel">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/banner02.jpg" alt="viajes de Juanito Travel">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/banner03.jpg" alt="viajes de Juanito Travel">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/banner04.jpg" alt="viajes de Juanito Travel">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSCADOR PARA PANTALLAS MOVIL -->
+    <section id="buscadorMovil" class="d-block d-md-none">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" id="formBuscadorMovil">
+                        <div class="form-group">
+                            <label class="sr-only" for="buscar">Buscar</label>
+                            <div class="input-group input-group-sm mb-2 mr-sm-2">
+                                <input type="text" class="form-control" id="buscar" placeholder="Buscar...">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-search text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU PRINCIPAL -->
+    <div id="menuPrincipal">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center no-gutters">
+                <div class="col-12">
+                    <span class="btnClose text-white">X</span>
+                    <nav class="menu d-flex flex-column text-center">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Sudamérica</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Centroamérica</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Norteamérica</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Europa</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Asia</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Africa</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white font-weight-light">Mi viaje por Oceanía</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRID DE CATEGORIAS -->
+    <section id="gridCategorias">
+        <div class="container-xl pt-2 pt-md-5">
+
+            <div class="d-flex">
+
+                <div class="d-flex flex-column columna1">
+                    <figure class="bg-danger foto1">
+                        <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3">Mi viaje por Sudamérica</p>
+                    </figure>
+                    <figure class="bg-primary foto2">
+                        <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3">Mi viaje por Africa</p>
+                    </figure>
+                    <figure class="bg-primary d-block d-md-none foto6">
+                        <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3">Mi viaje por Asia</p>
+                    </figure>
+                </div>
+
+                <div class="d-md-flex flex-column flex-fill columna2">
+                    <div class="d-md-flex flex-fill">
+                        <figure class="bg-warning flex-fill foto3">
+                            <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3 px-md-5 px-xl-2">Mi viaje por Centroamérica</p>
+                        </figure>
+                        <figure class="bg-info flex-fill foto4">
+                            <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3 px-md-5 px-xl-2">Mi viaje por Europa</p>
+                        </figure>
+                    </div>
+                    <figure class="bg-success flex-fill foto5">
+                        <p class="py-1 py-sm-2 py-md-3 py-xl-4 px-3">Mi viaje por Norteamérica</p>
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+    <!-- SWIPER - PARA EL SLIDER DE IMAGENES -->
+    <script src="js/swiper.min.js"></script>
+    <!-- UNIVERSAL PARALLAX -->
+    <script src="js/scripts.js"></script>
+</body>
 </html>
