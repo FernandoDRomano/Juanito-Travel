@@ -2,20 +2,253 @@
     ESCRITORIO (XL revisamos en 1366px en adelante)
 ============================================================ */ 
 
+/* 
+    CONFIGURACIONES INICIALES PARA TODA LA PÁGINA 
+*/
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Chewy', cursive; */
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a:visited, a:active, a:hover, a:link, a:focus{
+    list-style: none;
+    text-decoration: none;
+}
+
+/*
+    ESTILOS AL #encabezado
+*/
+header{
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logotipo{
+    width: 55%;
+}
+
+.redes ul li i{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes ul li i.fa-facebook-f {
+    background: #1475e0;
+}
+
+.redes ul li i.fa-instagram{
+    background-color: #b18768;
+}
+
+.redes ul li i.fa-twitter{
+    background-color: #00a6ff;
+}
+
+.redes ul li i.fa-youtube{
+    background-color: #f95f62;
+}
+
+.redes ul li i.fa-snapchat-ghost{
+    background-color: #ff9052;
+}
+
+header .botonMenu .fa-bars{
+    font-size: 35px;
+}
+
+#redesSocialesMovil{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 10;
+}
+
+/*
+    ESTILOS AL #banner
+*/
+
+#banner{
+    overflow: hidden;
+}
+
+#banner .swiper-slide img{
+    width: 100%;
+}
+
+
+/*
+    ESTILOS AL #menuPrincipal
+*/
+
+#menuPrincipal{
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: 2.3rem;
+    font-weight: 300;
+    line-height: 5rem;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+#menuPrincipal .btnClose{
+    position: absolute;
+    right: 25%;
+    top: -3rem;
+    font-size: 2.2rem;
+}
+
+/*
+    ESTILOS AL #gridCategorias
+*/
+
+#gridCategorias figure{
+    position: relative;
+    border-left: .5rem solid #fff;
+    border-right: .5rem solid #fff;
+    transition: all 3s ease;
+}
+
+#gridCategorias figure:hover{
+    background-position: right bottom;
+}
+
+#gridCategorias .columna1{
+    width: 40%;
+}
+
+#gridCategorias figure p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    margin-bottom: 0!important;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    transition: all .3s ease;
+}
+
+#gridCategorias .foto1{
+    height: 400px;
+    background-image: url(../img/suramerica.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias .foto2{
+    height: 300px;
+    background-image: url(../img/africa.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias .foto3{
+    height: 300px;
+    background-image: url(../img/centroamerica.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias .foto4{
+    height: 300px;
+    background-image: url(../img/europa.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias .foto5{
+    height: 400px;
+    background-image: url(../img/norteamerica.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias .foto6{
+    height: 200px;
+    background-image: url(../img/asia.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+#gridCategorias figure p:hover{
+    background-color: rgba(255, 57, 190, .7);
+}
+
 /* =========================================================
     TABLET HORIZONTAL (LG revisamos en 1024px)
 ============================================================ */ 
 
 @media (min-width:992px) and (max-width:1199px){
-
+    #menuPrincipal{
+        font-size: 2.3rem;
+    }
+    
+    #menuPrincipal .btnClose{
+        right: 15%;
+        top: -3.7rem;
+        font-size: 2.3rem;
+    }
 }
 
 /* =========================================================
     TABLET VERTICAL (MD revisamos en 768px)
 ============================================================ */ 
 
-@media (min-width:768px) and (max-width:991){
+@media (min-width:768px) and (max-width:991px){
+    #menuPrincipal{
+        font-size: 1.8rem;
+        line-height: 3.9rem;
+    }
     
+    #menuPrincipal .btnClose{
+        right: 15%;
+        top: -3.7rem;
+    }
+
+    #gridCategorias .foto1{
+        height: 300px;
+    }
+    
+    #gridCategorias .foto2{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto3{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto4{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto5{
+        height: 300px;
+    }
+
+    #gridCategorias figure p{
+        text-align: center;
+        font-size: 15px;
+    }
 }
 
 /* =========================================================
@@ -23,7 +256,52 @@
 ============================================================ */ 
 
 @media (min-width:576px) and (max-width:767px){
+    header .logotipo{
+        width: 65%;
+    }
+
+    #menuPrincipal{
+        font-size: 1.8rem;
+        line-height: 3.9rem;
+    }
     
+    #menuPrincipal .btnClose{
+        right: 5%;
+        top: -3.7rem;
+    }
+
+    #gridCategorias .columna1{
+        width: 50%;
+    }
+
+    #gridCategorias .foto1{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto2{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto3{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto4{
+        height: 200px;
+    }
+    
+    #gridCategorias .foto5{
+        height: 200px;
+    }
+
+    #gridCategorias .foto6{
+        height: 200px;
+    }
+
+    #gridCategorias figure p{
+        text-align: center;
+        font-size: 15px;
+    }
 }
 
 /* =========================================================
@@ -31,5 +309,51 @@
 ============================================================ */ 
 
 @media (max-width:575px){
+    header .logotipo{
+        width: 95%;
+    }
+
+    #menuPrincipal{
+        font-size: 1.2rem;
+        line-height: 3rem;
+    }
     
+    #menuPrincipal .btnClose{
+        right: 2%;
+        top: -3rem;
+        font-size: 1.5rem;
+    }
+
+    #gridCategorias .columna1{
+        width: 50%;
+    }
+
+    #gridCategorias .foto1{
+        height: 125px;
+    }
+    
+    #gridCategorias .foto2{
+        height: 125px;
+    }
+    
+    #gridCategorias .foto3{
+        height: 125px;
+    }
+    
+    #gridCategorias .foto4{
+        height: 125px;
+    }
+    
+    #gridCategorias .foto5{
+        height: 125px;
+    }
+
+    #gridCategorias .foto6{
+        height: 125px;
+    }
+
+    #gridCategorias figure p{
+        text-align: center;
+        font-size: 13px;
+    }
 }
