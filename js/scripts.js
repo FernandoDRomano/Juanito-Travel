@@ -23,6 +23,64 @@ let mySwiper = new Swiper ('.swiper-container', {
 })
 
 /*
+    PARA CONFIGURAR EL PAGINADOR
+*/
+
+$('#pagination').twbsPagination({
+    totalPages: 20,
+    visiblePages: 3,
+    first: "Primero",
+    last: "Último",
+    prev: '<i class="fas fa-angle-left"></i>',
+    next: '<i class="fas fa-angle-right"></i>',
+    onPageClick: function (event, page) {
+        $('#page-content').text('Page ' + page);
+    }
+});
+
+let paginador = document.getElementById('pagination');
+
+function redimenzionarPaginador(paginador){
+    let ancho = screen.width;
+    if(ancho < 425){
+        paginador.classList.add('pagination-sm');
+    }else{
+        paginador.classList.remove('pagination-sm');
+    }
+}redimenzionarPaginador(paginador);
+
+window.addEventListener("resize", (e) => {
+    let paginador = document.getElementById('pagination');
+    redimenzionarPaginador(paginador);
+});
+
+
+/*
+    PARA CONFIGURAR LA FLECHA QUE REALIZARA EL SCROLL SMOOTH
+*/
+
+//DETERMINAREMOS LA POSICIÓN EN LA QUE APARECE Y DESAPARECE LA FLECHA
+
+window.addEventListener('scroll', (e)=>{
+    let flecha = document.getElementById('scrollUp');
+    if(screen.width < 577){
+        if(window.scrollY > 300){
+            flecha.style.display = 'block';
+        }else{
+            flecha.style.display = 'none';
+        }
+    }else{
+        if(window.scrollY > 450){
+            flecha.style.display = 'block';
+        }else{
+            flecha.style.display = 'none';
+        }
+    }
+    
+});
+
+
+/*
     CONFIGURACIÓN PERSONALIZADA
 */
 
