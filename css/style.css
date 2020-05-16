@@ -370,6 +370,79 @@ header .botonMenu .fa-bars{
     height: 50px;
 }
 
+/*
+    ESTILOS A .boton
+*/
+
+.bloqueBotones{
+    display: flex;
+}
+
+.boton{
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    color: white;
+}
+
+.boton span{
+    font-size: 20px;
+    padding: 0 0 0 5px;
+}
+
+.boton i{
+    padding: 0 5px 0 0;
+}
+
+.facebook{
+    background-color: #1475E0;
+    border: 1px solid #1475E0;
+}
+
+.twitter{
+    background-color: #00A6FF;
+    border: 1px solid #00A6FF;
+}
+
+.google{
+    background-color: #DD4D41;
+    border: 1px solid #DD4D41;
+}
+
+/*
+    ESTILOS A .articulosRelacionados
+*/
+
+.articulosRelacionados .titulo{
+    color: #aaa;
+    font-size: 15px;
+}
+
+/*
+    ESTILOS A .opiniones
+*/
+
+.opiniones .comentario .foto{
+    padding: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.opiniones .titular{
+    color: #8e4876;
+    font-size: 1.6rem;
+}
+
+/*
+    ESTILOS A #formularioOpinion
+*/
+
+#formularioOpinion .campos{
+    width: 80%;
+}
+
+#formularioOpinion .imagen{
+    width: 20%;
+}
+
 /* =========================================================
     TABLET HORIZONTAL (LG revisamos en 1024px)
 ============================================================ */ 
@@ -399,6 +472,32 @@ header .botonMenu .fa-bars{
 
     .migaDePan li img{
         height: 45px;
+    }
+
+    .boton{
+        padding: .4rem .8rem;
+    }
+    
+    .boton span{
+        font-size: 20px;
+        padding: 0 0 0 5px;
+    }
+    
+    .boton i{
+        padding: 0 5px 0 0;
+    }
+
+    .opiniones .comentario .foto{
+        height:85px;
+        width:85px;
+    }
+
+    #formularioOpinion .campos{
+        width: 75%;
+    }
+    
+    #formularioOpinion .imagen{
+        width: 25%;
     }
     
 }
@@ -482,6 +581,41 @@ header .botonMenu .fa-bars{
         height: 40px;
     }
 
+    .boton{
+        padding: .3rem .7rem;
+    }
+    
+    .boton span{
+        font-size: 18px;
+        padding: 0 0 0 5px;
+    }
+    
+    .boton i{
+        padding: 0 5px 0 0;
+    }
+
+    .opiniones .comentario .foto{
+        height:85px;
+        width:85px;
+    }
+
+    .articulo .encabezado h2{
+        font-size: 30px;
+        display: inline-block;
+    }   
+
+    .articulo .encabezado .fecha{
+        top: 5px;
+    }
+
+    #formularioOpinion .campos{
+        width: 70%;
+    }
+    
+    #formularioOpinion .imagen{
+        width: 30%;
+    }
+
 }
 
 /* =========================================================
@@ -559,6 +693,38 @@ header .botonMenu .fa-bars{
     .migaDePan li img{
         height: 40px;
     }
+
+    .boton{
+        padding: .2rem .5rem;
+    }
+    
+    .boton span{
+        font-size: 16px;
+        padding: 0 0 0 4px;
+    }
+    
+    .boton i{
+        padding: 0 4px 0 0;
+    }
+
+    .opiniones .comentario .foto{
+        height:80px;
+        width:80px;
+    }
+
+    .articulo .encabezado h2{
+        font-size: 25px;
+        display: inline-block;
+    }   
+
+    .articulo .encabezado .fecha{
+        top: 8px;
+    }
+
+    #formularioOpinion .campos{
+        width: 100%;
+    }
+
 }
 
 /* =========================================================
@@ -642,5 +808,36 @@ header .botonMenu .fa-bars{
         height: 30px;
     }
     
+    .boton{
+        padding: .3rem .4rem;
+        font-size: 12px;
+    }
+    
+    .boton span{
+        font-size: 12px;
+        padding: 0 0 0 2px;
+    }
+    
+    .boton i{
+        padding: 0 2px 0 0;
+    }
+
+    .opiniones .comentario .foto{
+        height:70px;
+        width:70px;
+    }
+
+    .articulo .encabezado h2{
+        font-size: 20px;
+        display: inline-block;
+    }   
+
+    .articulo .encabezado .fecha{
+        top: 0px;
+    }
+
+    #formularioOpinion .campos{
+        width: 100%;
+    }
 
 }

@@ -22,6 +22,26 @@ let mySwiper = new Swiper ('.swiper-container', {
     grabCursor: true,
 })
 
+let swiper2 = new Swiper('.contenedorSwiper', {
+    //PARA QUE SE AUTO INICIE
+    autoplay: {
+        delay: 3000,
+    },
+    //PARA CONTROLAR CON LOS BOTONES DEL TECLADO
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    //LOOP INFINITO
+    loop: true,
+    //EFECTO AL PASAR EL SLIDE
+    effect: 'fade',
+    //TIEMPO ENTRE CAMBIO DE IMAGEN
+    speed: 700,
+    //PARA MOFICAR EL CURSOR: PARA QUE APARESCA LA MANITO
+    grabCursor: true,
+})
+
 /*
     PARA CONFIGURAR EL PAGINADOR
 */
@@ -40,19 +60,23 @@ $('#pagination').twbsPagination({
 
 let paginador = document.getElementById('pagination');
 
-function redimenzionarPaginador(paginador){
-    let ancho = screen.width;
-    if(ancho < 425){
-        paginador.classList.add('pagination-sm');
-    }else{
-        paginador.classList.remove('pagination-sm');
-    }
-}redimenzionarPaginador(paginador);
-
 window.addEventListener("resize", (e) => {
     let paginador = document.getElementById('pagination');
-    redimenzionarPaginador(paginador);
+    if(paginador){
+        redimenzionarPaginador(paginador);
+    }
 });
+
+function redimenzionarPaginador(paginador){
+    if(paginador){
+        let ancho = screen.width;
+        if(ancho < 425){
+            paginador.classList.add('pagination-sm');
+        }else{
+            paginador.classList.remove('pagination-sm');
+        }
+    }
+}redimenzionarPaginador(paginador);
 
 /*
     PARA CONFIGURAR LA FLECHA QUE REALIZARA EL SCROLL SMOOTH
