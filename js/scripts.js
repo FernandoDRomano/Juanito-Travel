@@ -54,7 +54,6 @@ window.addEventListener("resize", (e) => {
     redimenzionarPaginador(paginador);
 });
 
-
 /*
     PARA CONFIGURAR LA FLECHA QUE REALIZARA EL SCROLL SMOOTH
 */
@@ -92,26 +91,57 @@ window.addEventListener('scroll', (e)=>{
 //CALCULAR LA ANCHURA DE LA PANTALLA PARA DETERMINAR EL ALTO DEL SLIDE PARA CUBRIR LA BARRA DE NAVEGACIÓN
 let encabezado = document.getElementById('encabezado');
 let banner = document.getElementById('banner');
+let bannerParallax = document.getElementById('bannerParallax');
 
 //FUNCIÓN QUE SE EJECUTA AL CARGAR LA PÁGINA
 function redimenzionarAltoSlider(){
     let anchoPantalla = screen.width;
-    if(anchoPantalla > 767){
-        banner.style.height = "auto";
-    }else{
-        let altoEncabezado = encabezado.getBoundingClientRect().height;
-        banner.style.height = altoEncabezado + "px";
+    if (banner) {        
+        if(anchoPantalla > 767){
+            banner.style.height = "auto";
+        }else{
+            let altoEncabezado = encabezado.getBoundingClientRect().height;
+            banner.style.height = altoEncabezado + "px";
+        }
+    }
+    
+    if (bannerParallax) {        
+        if(anchoPantalla < 768){
+            let altoEncabezado = encabezado.getBoundingClientRect().height;
+            bannerParallax.style.height = altoEncabezado + "px";
+        }else if(anchoPantalla < 1024){
+            bannerParallax.style.height = '16rem';
+        }else if(anchoPantalla < 1366){
+            bannerParallax.style.height = '21.5rem'
+        }else{
+            bannerParallax.style.height = '34rem'
+        }
     }
 }redimenzionarAltoSlider();
 
 //EL EVENTO RESIZE ME PERMITE DETERMINAR CUANDO SE MODIFICA LAS DIMENSIONES DE LA PANTALLA
 window.addEventListener("resize", (e) => {
     let anchoPantalla = screen.width;
-    if(anchoPantalla < 768){
-        let altoEncabezado = encabezado.getBoundingClientRect().height;
-        banner.style.height = altoEncabezado + "px";
-    }else{
-        banner.style.height = "auto";
+    if (banner) {        
+        if(anchoPantalla < 768){
+            let altoEncabezado = encabezado.getBoundingClientRect().height;
+            banner.style.height = altoEncabezado + "px";
+        }else{
+            banner.style.height = "auto";
+        }
+    }
+
+    if (bannerParallax) {        
+        if(anchoPantalla < 768){
+            let altoEncabezado = encabezado.getBoundingClientRect().height;
+            bannerParallax.style.height = altoEncabezado + "px";
+        }else if(anchoPantalla < 1024){
+            bannerParallax.style.height = '16rem';
+        }else if(anchoPantalla < 13666){
+            bannerParallax.style.height = '21.5rem'
+        }else{
+            bannerParallax.style.height = '34rem'
+        }
     }
 });
 
@@ -126,19 +156,38 @@ let iconoMenu = document.getElementsByClassName('fa-bars')[0];
 window.addEventListener('scroll', (e)=>{
     //Variables
     let banner = document.getElementById('banner');
-    let alturaBanner = banner.getBoundingClientRect().height;
-
-    if (window.scrollY > alturaBanner) {
-        encabezado.style.backgroundColor = "#fff";
-        logo.style.filter = "invert(100)";
-        iconoMenu.style.color = "#000000";
-        iconoBuscar.style.color = "#000000";
-    } else {
-        encabezado.style.backgroundColor = "rgba(0,0,0,0.5)";
-        logo.style.filter = "invert(0)";
-        iconoMenu.style.color = "#ffffff";
-        iconoBuscar.style.color = "#ffffff";
+    if(banner){
+        let alturaBanner = banner.getBoundingClientRect().height;
+    
+        if (window.scrollY > alturaBanner) {
+            encabezado.style.backgroundColor = "#fff";
+            logo.style.filter = "invert(100)";
+            iconoMenu.style.color = "#000000";
+            iconoBuscar.style.color = "#000000";
+        } else {
+            encabezado.style.backgroundColor = "rgba(0,0,0,0.5)";
+            logo.style.filter = "invert(0)";
+            iconoMenu.style.color = "#ffffff";
+            iconoBuscar.style.color = "#ffffff";
+        }
     }
+
+    if(bannerParallax){
+        let alturaBanner = bannerParallax.getBoundingClientRect().height;
+    
+        if (window.scrollY > alturaBanner) {
+            encabezado.style.backgroundColor = "#fff";
+            logo.style.filter = "invert(100)";
+            iconoMenu.style.color = "#000000";
+            iconoBuscar.style.color = "#000000";
+        } else {
+            encabezado.style.backgroundColor = "rgba(0,0,0,0.5)";
+            logo.style.filter = "invert(0)";
+            iconoMenu.style.color = "#ffffff";
+            iconoBuscar.style.color = "#ffffff";
+        }
+    }
+
 });
 
 
