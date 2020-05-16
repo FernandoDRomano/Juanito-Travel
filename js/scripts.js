@@ -107,6 +107,21 @@ window.addEventListener('scroll', (e)=>{
     CONFIGURACIÓN PERSONALIZADA
 */
 
+/**
+ *  PARA BLOQUAR EL CLICK DERECHO Y LA TECLA F12
+ */
+
+ //BLOQUER EL CLICK DERECHO
+document.oncontextmenu = function(){
+    return false
+};
+
+//BLOQUEAR EL F12
+document.addEventListener('keydown', (e)=>{
+    if (e.keyCode == '123') {
+        e.preventDefault();
+    }
+})
 
 /**
  *  PARA REALIZAR LA CONFIGURACIÓN DE LA ALTURA DEL BANNER Y LAS DIFERENTES MEDIDAS DE PANTALLA
